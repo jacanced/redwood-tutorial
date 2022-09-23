@@ -1,6 +1,10 @@
 import { Link, routes } from '@redwoodjs/router'
 
-const BlogLayout = ({ children }) => {
+type BlogLayoutProps = {
+  children?: React.ReactNode
+}
+
+const BlogLayout = ({ children }: BlogLayoutProps) => {
   return (
     <>
       <header>
@@ -14,6 +18,9 @@ const BlogLayout = ({ children }) => {
             </li>
             <li>
               <Link to={routes.about()}>About</Link>
+            </li>
+            <li>
+              <Link to={routes.contact()}>Contact</Link>
             </li>
           </ul>
         </nav>
